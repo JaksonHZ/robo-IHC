@@ -4,6 +4,7 @@ import { useExternalScript } from "../../utils/ai-sdk/externalScriptsLoader";
 import { getAiSdkControls } from "../../utils/ai-sdk/loader";
 
 import FaceTrackerComponent from "../../components/FaceTrackerComponent";
+import styles from "./styles.module.css";
 
 export default function Reconhecimento(){
 
@@ -38,12 +39,14 @@ export default function Reconhecimento(){
   }
 
   return(
-    <>
-    <h1>Reconhecimento</h1>
-    <div style={{width:"640px", height: "480px", position:"relative"}}>
-      <video id="videoEl"></video>
-      <FaceTrackerComponent videoEl={videoEl}></FaceTrackerComponent>
+    <div className={styles.body}>
+      <h1>Enquadre seu rosto abaixo
+          para que eu possa detectar 
+          o que você está sentindo. </h1>
+      <div className={styles.containerVideo}>
+        <video id="videoEl"></video>
+        <FaceTrackerComponent videoEl={videoEl}></FaceTrackerComponent>
+      </div>
     </div>
-    </>
   )
 }
