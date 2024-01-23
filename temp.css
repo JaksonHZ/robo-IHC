@@ -1,10 +1,13 @@
 /*Arquivo temporário de css para estilização da primeira página*/
 
 #container{
+    margin: 0;
     /* background-color: tomato; */
     display: flex;
     flex-direction: column;
     align-self: flex-start;
+    align-items: center;
+    /* max-height: 100vh;   */
 }
 
 #container img{
@@ -13,6 +16,29 @@
 
 #container h1{
     margin: 0px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    line-height: 50px; /* 125% */
+    letter-spacing: 0.2px;
 }
 
+#feelings{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#feelings div{
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+#feelings img{
+    /* max-width: 200%; */
+    width: 95px;
+}
+
+#feelings input[type="button"]{
+    width: 130px;
+}
