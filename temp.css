@@ -1,0 +1,18 @@
+/*Arquivo temporário de css para estilização da primeira página*/
+
+#container{
+    /* background-color: tomato; */
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+
+#container img{
+    align-self: center;
+}
+
+#container h1{
+    margin: 0px;
+    margin-bottom: 20px;
+}
+

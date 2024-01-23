@@ -1,28 +1,59 @@
+/* Estilo para a página index */
+
+*{
+  overflow: hidden; /*esconde o overflow*/
+  padding: 0;
+}
+
 body {
   background-image: url("../../assets/Group.png");
-  width: 1280px;
-  height: 800px;
-  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  /* background-repeat: no-repeat; */
+  background-position: center 100%; /*faz as nuvens brancas aparecer*/
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.body h1{
+body h1, p{
   color: #FFF;
   text-align: center;
   font-family: 'Roboto', sans-serif;
-  font-size: 40px;
+  font-size: 35px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 50px; /* 125% */
-  letter-spacing: 0.1px;
+  font-weight: 200;
+  line-height: 30px; /* 125% */
+  letter-spacing: 0.2px;
   width: 700px;
 }
 
-.body video {
-  
+body p{
+  margin-top: 25px;
+  font-size: 15px;
 }
+
+
+body img{
+  width: 40%;
+}
+
+body input[type="button"]{
+  padding: 10px 24px 10px 24px;
+  font-weight: bold;
+  border-radius: 16px 16px 16px 16px;
+  width: 125px;
+  border: none;
+  outline: none;
+  align-self: center;
+  margin-top: 30px;
+}
+
+
+/* .body video {
+  
+} */
 
 .containerVideo {
   width: 700px; 
