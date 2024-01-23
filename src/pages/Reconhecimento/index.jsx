@@ -1,9 +1,9 @@
 
-import { useEffect, useRef, useContext } from "react";
 import { useExternalScript } from "../../utils/ai-sdk/externalScriptsLoader";
 import { getAiSdkControls } from "../../utils/ai-sdk/loader";
-
 import FaceTrackerComponent from "../../components/FaceTrackerComponent";
+
+import { useEffect, useRef, useContext } from "react";
 import styles from "./styles.module.css";
 import CustomFontSize from "../../components/CustomFontSize/CustomFontSize";
 import { FontSizeContext } from "../../context/ContextFontSize";
