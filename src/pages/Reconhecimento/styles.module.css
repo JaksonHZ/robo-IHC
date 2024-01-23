@@ -1,4 +1,9 @@
+
 body {
+  margin: 0;
+  padding: 0;
+}
+.body {
   background-image: url("../../assets/Group.png");
   width: 1280px;
   height: 800px;
@@ -6,6 +11,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .body h1{
