@@ -1,0 +1,19 @@
+.button {
+  padding: 10px 24px 10px 16px;
+  width: 180px;
+  border-radius: 50px;
+  outline: none;
+  border-width: 0px;
+  box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+}
+
+.button:hover {
+  background-color: beige;
+}
+
+.button span{
+  font-size: 20px;
+  font-weight: 500;
+  outline: none;
+  
+}
