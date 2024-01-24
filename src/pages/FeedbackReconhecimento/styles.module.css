@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.body{
+  background-image: url("../../assets/Group.png");
+  width: 1280px;
+  height: 800px;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+  position: relative;
+}
+
+.containerButton {
+  display: flex;
+  flex-direction: row;
+  column-gap: 25px;
+}

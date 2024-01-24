@@ -13,6 +13,7 @@ body {
   justify-content: center;
   flex-direction: column;
   row-gap: 20px;
+  position: relative;
 }
 
 .body p{
@@ -42,4 +43,10 @@ body {
   border: 2px solid #FFF;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.28);
+}
+
+.buttonNext {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
 }

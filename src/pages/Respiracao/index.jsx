@@ -42,7 +42,13 @@ export default function Respiracao() {
 
   return (
     <div className={styles.body}>
-      <p>Caso deseje iniciar o exercício de respiração guiada clique em começar</p>
+
+      {
+      started 
+      ? <p>Fique tranquilo e concentre-se na respiração</p>
+      : <p>Caso deseje iniciar o exercício de respiração guiada clique em começar</p>
+      }
+      
 
       <div
         className={styles.bigCircle}
@@ -63,6 +69,8 @@ export default function Respiracao() {
       {started && (
         <CustomButton text={"Parar"} onClick={handleStop} />
       )}
+
+      <CustomButton className={styles.buttonNext} text={"Seguir"} onClick={() => console.log("teste")} />
     </div>
   );
 }

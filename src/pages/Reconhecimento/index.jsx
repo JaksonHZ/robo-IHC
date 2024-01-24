@@ -1,44 +1,62 @@
-
-import { useExternalScript } from "../../utils/ai-sdk/externalScriptsLoader";
-import { getAiSdkControls } from "../../utils/ai-sdk/loader";
-import FaceTrackerComponent from "../../components/FaceTrackerComponent";
-
-import { useEffect, useRef, useContext } from "react";
+import { useEffect, useRef, useContext, useState } from "react";
 import styles from "./styles.module.css";
 import CustomFontSize from "../../components/CustomFontSize/CustomFontSize";
 import { FontSizeContext } from "../../context/ContextFontSize";
+import { useExternalScript } from "../../utils/ai-sdk/externalScriptsLoader";
+import { getAiSdkControls } from "../../utils/ai-sdk/loader";
+import FaceTrackerComponent from "../../components/FaceTrackerComponent";
+import { useNavigate } from "react-router-dom";
 
 export default function Reconhecimento(){
   const { fontSize } = useContext(FontSizeContext);
   const mphToolsState = useExternalScript("https://sdk.morphcast.com/mphtools/v1.0/mphtools.js");
   const aiSdkState = useExternalScript("https://ai-sdk.morphcast.com/v1.16/ai-sdk.js");
-  const videoEl = useRef(undefined)
+  const videoEl = useRef(null);
+  const [lastEmotion, setLastEmotion] = useState('');
+  const [emotionCount, setEmotionCount] = useState(0);
+  // eslint-disable-next-line no-unused-vars
+  const navigate = useNavigate();
 
   useEffect(() => {
     videoEl.current = document.getElementById("videoEl");
     async function getAiSdk (){
       if(aiSdkState === "ready" && mphToolsState === "ready"){
         const { source, start } = await getAiSdkControls();
-      await source.useCamera({
-        toVideoElement: document.getElementById("videoEl"),
-      });
+        await source.useCamera({
+          toVideoElement: videoEl.current,
+        });
         await start();
-        
       }
-     
     }
     getAiSdk();
   }, [aiSdkState, mphToolsState]);
 
   useEffect(() => {
-    bindEvents();
-  }, []);
+    function handleEmotion(evt) {
+      const dominantEmotion = evt.detail.output.dominantEmotion || "";
+      console.log(dominantEmotion);
 
-  function bindEvents(){
-    window.addEventListener("CY_FACE_EMOTION_RESULT", (evt) => {
-      console.log(evt.detail.output.dominantEmotion || "") ;
-    });
-  }
+      if (dominantEmotion === lastEmotion) {
+        setEmotionCount(emotionCount + 1);
+
+        if (emotionCount + 1 === 30) {
+          console.log(`Enviando emoção dominante: ${dominantEmotion}`);
+          navigate("/reconhecimento/feedback", {state: {emotion: dominantEmotion}});
+          setEmotionCount(0);
+          setLastEmotion('');
+        }
+      } else {
+        setLastEmotion(dominantEmotion);
+        setEmotionCount(1);
+      }
+    }
+
+    window.addEventListener("CY_FACE_EMOTION_RESULT", handleEmotion);
+
+    return () => {
+      window.removeEventListener("CY_FACE_EMOTION_RESULT", handleEmotion);
+    };
+  }, [lastEmotion, emotionCount]);
 
   return(
     <div className={styles.body}>
@@ -47,7 +65,7 @@ export default function Reconhecimento(){
           para que eu possa detectar 
           o que você está sentindo. </h1>
       <div className={styles.containerVideo}>
-        <video id="videoEl"></video>
+        <video id="videoEl" ref={videoEl} autoPlay playsInline></video>
         <FaceTrackerComponent videoEl={videoEl}></FaceTrackerComponent>
       </div>
     </div>
