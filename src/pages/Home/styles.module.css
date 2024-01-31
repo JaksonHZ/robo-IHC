@@ -40,6 +40,7 @@ body {
     align-items: center;
     align-self: center;
     width: 200px;
+    cursor: pointer;
 
     font-size: 20px;
     font-style: normal;
@@ -53,7 +54,7 @@ body img{
     flex-shrink: 0;
 }
 
-body p{
+.body p{
     color: #FFF;
     text-align: center;
     font-family: 'Roboto', sans-serif;

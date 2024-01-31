@@ -1,21 +1,27 @@
 import { useContext } from "react";
 import styles from "./styles.module.css";
 import CustomFontSize from "../../components/CustomFontSize/CustomFontSize";
+import ConfigButton from "../../components/ConfigButton/ConfigButton";
 import { FontSizeContext } from "../../context/ContextFontSize";
 import { Link } from "react-router-dom";
 
 export default function TermosDeUso(){
     const { fontSize } = useContext(FontSizeContext);
 
+    const calculateDynamicFontSize = (baseFontSize) => {
+        // Aqui você pode ajustar o fator multiplicativo ou aditivo conforme necessário
+        return baseFontSize * (fontSize / 40);
+    };
+
     return(
         <div className={styles.body} style={{ color: 'white' }}>
+            <ConfigButton />
             <CustomFontSize />
-            <h1 className={styles.firstSon} style={{ fontSize: `${fontSize}px` }}>Termos de Uso</h1>
-            <p>
-                Bem-vindo ao serviço de atendimento automatizado do Departamento de  Computação da UFSCar.<br></br><br></br>
-                Ao utilizar este serviço, você concorda com os seguintes termos de uso:
+            <h1 className={styles.firstSon} style={{ fontSize: `${calculateDynamicFontSize(40)}px` }}>Termos de Uso</h1>
+            <p style={{ fontSize: `${calculateDynamicFontSize(16)}px` }}>
+                Bem-vindo ao serviço de atendimento automatizado do Departamento de  Computação da UFSCar. Ao utilizar este serviço, você concorda com os seguintes termos de uso:
             </p>
-            <ol>
+            <ol style={{ fontSize: `${calculateDynamicFontSize(14)}px` }}>
                 <li>
                 <strong>Finalidade do Serviço:</strong> Este serviço destina-se a fornecer informações e assistência relacionadas aos assuntos do Departamento de Computação da UFSCar.
                 </li>
