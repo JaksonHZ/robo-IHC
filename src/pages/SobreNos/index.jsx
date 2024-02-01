@@ -4,7 +4,7 @@ import CustomFontSize from "../../components/CustomFontSize/CustomFontSize";
 import { FontSizeContext } from "../../context/ContextFontSize";
 import { Link } from "react-router-dom";
 import ConfigButtonBlue from "../../components/ConfigButtonBlue/ConfigButton";
-
+import robo from "../../assets/bot.png";
 export default function SobreNos() {
   const { fontSize } = useContext(FontSizeContext);
 
@@ -27,7 +27,7 @@ export default function SobreNos() {
         <p>o individuo está sentindo e </p>
         <p>ajudá-lo a se sentir melhor.</p>
         <p>Esperamos que goste.</p>
-        <img className={styles.img} src="src\assets\bot.png" alt="Não foi possível encontrar a imagem :(" />
+        <img className={styles.img} src={robo} alt="Não foi possível encontrar a imagem :(" />
 
       </div>
     </div>

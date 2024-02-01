@@ -4,6 +4,7 @@ import CustomFontSize from "../../components/CustomFontSize/CustomFontSize";
 import { FontSizeContext } from "../../context/ContextFontSize";
 import { Link } from "react-router-dom";
 import ConfigButton from "../../components/ConfigButton/ConfigButton";
+import robo from "../../assets/bot.png";
 
 export default function Home() {
   const { fontSize } = useContext(FontSizeContext);
@@ -20,7 +21,7 @@ export default function Home() {
       <h1 className={styles.firstSon} style={{ fontSize: `${calculateDynamicFontSize(40)}px` }}>Olá!</h1>
       <h1 style={{ fontSize: `${calculateDynamicFontSize(40)}px` }}>Eu sou o robô anfitrião do DC!</h1>
       <h1 style={{ fontSize: `${calculateDynamicFontSize(40)}px` }}>Gostaria de iniciar um atendimento?</h1>
-      <img src="src\assets\bot.png" alt="Não foi possível encontrar a imagem :(" />
+      <img src={robo} alt="Não foi possível encontrar a imagem :(" />
       <Link to="/reconhecimento" style={{ textDecoration: 'none' }}>
         <input type="button" value="INICIAR" className={styles.button} style={{ fontSize: `${calculateDynamicFontSize(16)}px` }} />
       </Link>
