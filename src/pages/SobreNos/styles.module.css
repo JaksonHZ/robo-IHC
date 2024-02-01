@@ -1,0 +1,59 @@
+leftContent {
+    margin: 0;
+    padding: 0;
+}
+
+.leftContent{
+    background-image: url("../../assets/Cloud.png");
+    width: 1280px;
+    height: 800px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: row-reverse;
+   }
+
+.leftContent h1{
+    color: #000000;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 40px; /* 125% */
+    letter-spacing: 0.1px;
+    margin-bottom: 0;
+    margin-left: 120px;
+    margin-top: 100px;
+}
+
+.firstSon{
+    margin-top: 40px;
+}
+
+.img{
+    width: 297px;
+    height: 259px;
+    flex-shrink: 0;
+    margin-left: 800px;
+    margin-top: 0px;
+    position: absolute;
+}
+
+.p{
+    margin-left: 30px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.p p {
+    margin-bottom: 0px;
+}

@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './styles.module.css';
 
-const ConfigButton = () => {
+const ConfigButtonBlue = () => {
     return (
         <Link to="/ConfigGeral">
             <button className={styles.configButton}></button>
@@ -11,5 +11,5 @@ const ConfigButton = () => {
     );
 };
 
-export default ConfigButton;
+export default ConfigButtonBlue;
 

@@ -6,6 +6,8 @@ import FeedbackReconhecimento from "../pages/FeedbackReconhecimento";
 import RespostasProntas from "../pages/RespostasProntas";
 import ProblemasNosEstudos from "../pages/ProblemasNosEstudos";
 import TermosDeUso from "../pages/TermosDeUso";
+import ConfigGeral from "../pages/ConfigGeral";
+import SobreNos from "../pages/SobreNos";
 
 const AppRouter = () => {
   return(
@@ -18,6 +20,8 @@ const AppRouter = () => {
         <Route path="/respostas_prontas" element={<RespostasProntas />}/>
         <Route path="/problemas_nos_estudos" element={<ProblemasNosEstudos />}/>
         <Route path="/termos_de_uso" element={<TermosDeUso />}/>
+        <Route path="/ConfigGeral" element={<ConfigGeral />}/>
+        <Route path="/SobreNos" element={<SobreNos />}/>
       </Routes> 
     </>
   )
