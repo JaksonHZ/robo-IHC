@@ -10,6 +10,15 @@ import ConfigGeral from "../pages/ConfigGeral";
 import SobreNos from "../pages/SobreNos";
 import Meditacao from "../pages/Meditacao";
 import PositivaReconhecimentoNivel from "../pages/PositivaReconhecimentoNivel";
+import SentindoSo from "../pages/sentindo_so";
+import Sentimentos from "../pages/Sentimentos";
+import MorarSo from "../pages/moroSo";
+import MorarFamilia from "../pages/moroFamilia";
+import MorarRep from "../pages/moroAmigos";
+import Ansiedade from "../pages/Ansiedade";
+import SemInfo from "../pages/nseiinformar";
+import FeedbackRotina from "../pages/FeedbackRotina";
+import Agradecimento from "../pages/Agradecimentos";
 
 const AppRouter = () => {
   return(
@@ -26,6 +35,14 @@ const AppRouter = () => {
         <Route path="/ConfigGeral" element={<ConfigGeral />}/>
         <Route path="/SobreNos" element={<SobreNos />}/>
         <Route path="/meditacao" element={<Meditacao />}/>
+        <Route path="/sentimentos" element={<Sentimentos />}/>
+        <Route path="/sentindo_so" element={<SentindoSo />}/>
+        <Route path="/moroSo" element={<MorarSo />}/>
+        <Route path="/morar_com_familiares" element={<MorarFamilia />}/>
+        <Route path="/morar_com_amigos" element={<MorarRep />}/>
+        <Route path="/ansiedade" element={<Ansiedade />}/>
+        <Route path="/semInfo" element={<SemInfo />}/>
+        <Route path="/agradecimentos" element={<Agradecimento />}/>
       </Routes> 
     </>
   )

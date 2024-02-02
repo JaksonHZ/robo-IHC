@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.body{
+    background-image: url("../../assets/Group.png");
+    width: 1280px;
+    height: 800px;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.body h1{
+    color: #FFF;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 125% */
+    letter-spacing: 0.1px;
+    margin-bottom: 0;
+}
+
+.firstSon{
+    margin-top: 140px;
+}
+
+.button{
+    display: flex;
+    padding: 15px 24px 15px 24px;
+    border-radius: 20px 20px 20px 20px;
+    border: none;
+    justify-content: center;
+    font-weight: bold;
+    align-items: center;
+    align-self: center;
+    width: 200px;
+    cursor: pointer;
+    margin-top: 42px;
+
+    font-size: 20px;
+    font-style: normal;
+    font-weight: bolder;
+    line-height: 20px;
+}
+
+body img{
+    width: 297px;
+    height: 259px;
+    flex-shrink: 0;
+    margin-top: 80px;
+}
+
+.body p{
+    color: #FFF;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 30px;
+}
