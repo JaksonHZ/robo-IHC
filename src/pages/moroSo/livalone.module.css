@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    
+    width: 1280px;
+    height: 800px;
+}
+
+.body{
+    background-image: url("../../assets/sweetblue.png");
+    width: 1280px;
+    height: 800px;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.body h1{
+    color: #FFF;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 125% */
+    letter-spacing: 0.1px;
+    margin-bottom: 0;
+}
+
+.firstSon{
+    margin-top: 100px;
+}
+
+.Container{
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    max-height: 486px;
+    /* background-color: #ff0; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.Container div{
+    background-color: #FFF;
+    height: 486px;
+    width: 541px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 40px;
+    border-radius: 100px;
+    font-size: 25px;
+}
+
+.balao1{
+    margin-right: 25px;
+}
+
+.balao1 img{
+    margin-top: 77px;
+    width: 184px;
+    height: 223px;
+}
+
+.balao2{
+    margin-left: 25px;
+}
+
+.balao2 img{
+    margin-top: 60px;
+    width: 193.47px;
+    height: 200px;
+}
+
+.balao1 p, .balao2 p{
+    margin-top: 40px;
+    max-width: 449px;
+    max-height: 120px;
+}
+
+.allback{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.back, .finalize{ /*Botão de voltar*/
+    padding: 15px 24px 15px 24px;
+    border-radius: 30px 30px 30px 30px;
+    border: none;
+    font-weight: bold;
+    width: 170px;
+    margin-top: 30px;
+    box-shadow: 5px 7px 3px #4e4e4e81;
+}
+
+.back{
+    margin-left: 126px;
+}
+
+.finalize{
+    margin-right: 126px;
+}
