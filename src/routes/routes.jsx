@@ -29,6 +29,7 @@ const AppRouter = () => {
         <Route path="/reconhecimento/positivanivel" element={<PositivaReconhecimentoNivel />}/>
         <Route path="/respiracao" element={<Respiracao />}/>
         <Route path="/reconhecimento/feedback" element={<FeedbackReconhecimento />}/>
+        <Route path="/reconhecimento/feedback/rotina" element={<FeedbackRotina />}/>
         <Route path="/respostas_prontas" element={<RespostasProntas />}/>
         <Route path="/problemas_nos_estudos" element={<ProblemasNosEstudos />}/>
         <Route path="/termos_de_uso" element={<TermosDeUso />}/>

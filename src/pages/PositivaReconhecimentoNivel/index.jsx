@@ -17,7 +17,7 @@ export default function PositivaReconhecimentoNivel(){
         <div className={styles.body}>
             <ConfigButton />
             <CustomFontSize />
-            <p className={styles.firstSon} style={{ fontSize: `${fontSize}px` }}>Qual o nível dessa emoção</p>
+            <p style={{ fontSize: `${fontSize}px`, color: 'white' }}>Qual o nível dessa emoção</p>
             <img src={robo} alt="Não foi possível encontrar a imagem :(" />
             <div className={styles.containerButton}>
                 {[...Array(10).keys()].map((number) => (
