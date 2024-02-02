@@ -10,7 +10,7 @@ body {
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   flex-direction: column;
   position: relative;
 }
@@ -18,9 +18,26 @@ body {
 .containerButton {
   display: flex;
   flex-direction: row;
-  column-gap: 25px;
+  column-gap: 10px;
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: none;
+}
+
+.selected {
+  background-color: #356CB1;
 }
 
 p {
-  color: white
+  color: white;
+}
+
+.nextButton {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }

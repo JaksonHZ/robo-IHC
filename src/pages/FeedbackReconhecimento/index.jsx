@@ -9,7 +9,7 @@ export default function FeedbackReconhecimento(){
     const { fontSize } = useContext(FontSizeContext);
     const location = useLocation();
     const { emotion } = location.state || {};
-
+    
     return(
         <div className={styles.body}>
             <CustomFontSize />

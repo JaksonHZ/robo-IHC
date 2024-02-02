@@ -9,12 +9,15 @@ import TermosDeUso from "../pages/TermosDeUso";
 import ConfigGeral from "../pages/ConfigGeral";
 import SobreNos from "../pages/SobreNos";
 import Meditacao from "../pages/Meditacao";
+import PositivaReconhecimentoNivel from "../pages/PositivaReconhecimentoNivel";
+
 const AppRouter = () => {
   return(
     <>
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/reconhecimento" element={<Reconhecimento />}/>
+        <Route path="/reconhecimento/positivanivel" element={<PositivaReconhecimentoNivel />}/>
         <Route path="/respiracao" element={<Respiracao />}/>
         <Route path="/reconhecimento/feedback" element={<FeedbackReconhecimento />}/>
         <Route path="/respostas_prontas" element={<RespostasProntas />}/>
