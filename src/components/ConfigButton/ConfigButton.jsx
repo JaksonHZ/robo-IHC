@@ -1,12 +1,13 @@
 // ConfigButton.js
 import { Link } from 'react-router-dom';
 import styles from './styles.module.css';
-import { MdOutlineSettings } from "react-icons/md";
+import { FaQuestion } from "react-icons/fa";
+
 const ConfigButton = () => {
     return (
         <div className={styles.configButton}>
             <Link to="/ConfigGeral">
-                <MdOutlineSettings size={40} color='black'/>
+                <FaQuestion size={32}/>
             </Link>
         </div>
     );
