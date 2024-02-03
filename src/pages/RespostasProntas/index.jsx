@@ -32,7 +32,7 @@ export default function RespostasProntas(){
             </Link>
 
             <div className={styles.allback}>
-            <Link to="/respostas_prontas" style={{ textDecoration: 'none' }}>
+            <Link to="/meditacao" style={{ textDecoration: 'none' }}>
                   <input type="button" value="VOLTAR" className={styles.back} style={{ fontSize: `${calculateDynamicFontSize(16)}px` }} />
             </Link>
           </div>
