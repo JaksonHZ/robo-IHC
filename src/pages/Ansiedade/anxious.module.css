@@ -107,10 +107,12 @@ p {
 
 .back{
     margin-left: 126px;
+    cursor: pointer;
 }
 
 .finalize{
     margin-right: 126px;
+    cursor: pointer;
 }
 
 .repeat{
@@ -118,7 +120,8 @@ p {
     border-radius: 30px 30px 30px 30px;
     border: none;
     font-weight: bold;
-    width: 300px;
+    width: 350px;
     height: 50px;
     margin-top: 42px;
+    cursor: pointer;
 }

@@ -26,7 +26,7 @@ export default function SemInfo()
             <Link to="/respostas_prontas" style={{ textDecoration: 'none' }}>
                   <input type="button" value="VOLTAR" className={styles.back} style={{ fontSize: `${calculateDynamicFontSize(16)}px` }} />
             </Link>
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Link to="/reconhecimento/feedback/rotina" style={{ textDecoration: 'none' }}>
                   <input type="button" value="CONCLUIR" className={styles.finalize} style={{ fontSize: `${calculateDynamicFontSize(16)}px` }} />
             </Link>
           </div>

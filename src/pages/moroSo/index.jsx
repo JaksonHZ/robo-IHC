@@ -22,11 +22,11 @@ export default function MorarSo()
             <h1 className={styles.firstSon} style={{ fontSize: `${calculateDynamicFontSize(40)}px` }}>Sim, moro só</h1>
             <div className={styles.Container}>
                 <div className={styles.balao1}>
-                    <p>Tente entrar em contato com algum familiar ou amigo próximo e compartilhe o que você está sentindo nesse momento, além de realizarem alguma atividade de lazer juntos.</p>
+                    <p style={{ fontSize: `${calculateDynamicFontSize(16)}px` }}>Tente entrar em contato com algum familiar ou amigo próximo e compartilhe o que você está sentindo nesse momento, além de realizarem alguma atividade de lazer juntos.</p>
                     <img src="src\assets\soamigos.png" alt="Não foi possível encontrar imagem" />
                 </div>
                 <div className={styles.balao2}>
-                    <p>Recomendo também que você procure a ajuda de um profissional para melhor lhe orientar. No QR Code abaixo, há uma tabela com alguns psicólogos disponíveis em São Carlos.</p>
+                    <p style={{ fontSize: `${calculateDynamicFontSize(16)}px` }}>Recomendo também que você procure a ajuda de um profissional para melhor lhe orientar. No QR Code abaixo, há uma tabela com alguns psicólogos disponíveis em São Carlos.</p>
                     <img src="src\assets\tabelapsico.png" alt="Não foi possível encontrar imagem" />
                 </div>
             </div>
@@ -35,7 +35,7 @@ export default function MorarSo()
             <Link to="/sentindo_so" style={{ textDecoration: 'none' }}>
                   <input type="button" value="VOLTAR" className={styles.back} style={{ fontSize: `${calculateDynamicFontSize(16)}px` }} />
             </Link>
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Link to="/reconhecimento/feedback/rotina" style={{ textDecoration: 'none' }}>
                   <input type="button" value="CONCLUIR" className={styles.finalize} style={{ fontSize: `${calculateDynamicFontSize(16)}px` }} />
             </Link>
           </div>

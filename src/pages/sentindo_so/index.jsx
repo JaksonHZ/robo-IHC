@@ -19,16 +19,16 @@ export default function SentindoSo()
         <div className={styles.body}>
           <ConfigButton />
           <CustomFontSize />
-            <h1 className={styles.firstSon} style={{ fontSize: `${calculateDynamicFontSize(40)}px` }}>Estou tendo problemas familiares e me sentindo só</h1>
-            <h1 style={{ fontSize: `${calculateDynamicFontSize(40)}px` }}>Você mora só?</h1>
+            <h1 className={styles.firstSon} style={{ fontSize: `${calculateDynamicFontSize(32)}px` }}>Estou tendo problemas familiares e me sentindo só</h1>
+            <h1 style={{ fontSize: `${calculateDynamicFontSize(32)}px` }}>Você mora só?</h1>
             <Link to="/morar_com_amigos" style={{ textDecoration: 'none' }}>
-                <input type="button" value="Não, divido casa com amigos (república, pensão, etc)" className={styles.button} style={{ fontSize: `${calculateDynamicFontSize(22)}px` }} />
+                <input type="button" value="Não, divido casa com amigos (república, pensão, etc)" className={styles.button} style={{ fontSize: `${calculateDynamicFontSize(18)}px` }} />
             </Link> 
             <Link to="/morar_com_familiares" style={{ textDecoration: 'none' }}>
-                <input type="button" value="Não, moro com familiares" className={styles.button} style={{ fontSize: `${calculateDynamicFontSize(22)}px` }} />
+                <input type="button" value="Não, moro com familiares" className={styles.button} style={{ fontSize: `${calculateDynamicFontSize(18)}px` }} />
             </Link> 
             <Link to="/moroSo" style={{ textDecoration: 'none' }}>
-                <input type="button" value="Sim, em São Carlos moro só" className={styles.button} style={{ fontSize: `${calculateDynamicFontSize(22)}px` }} />
+                <input type="button" value="Sim, em São Carlos moro só" className={styles.button} style={{ fontSize: `${calculateDynamicFontSize(18)}px` }} />
             </Link> 
 
             <div className={styles.allback}>

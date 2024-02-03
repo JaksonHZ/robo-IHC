@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.body{
+  background-image: url("../../assets/Group.png");
+  width: 1280px;
+  height: 800px;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.containerButton {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: none;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #356CB1;
+}
+
+p {
+  color: white;
+}
+
+.nextButton {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-weight: bolder;
+}

@@ -19,14 +19,14 @@ export default function MorarRep()
         <div className={styles.body}>
           <ConfigButton />
           <CustomFontSize />
-            <h1 className={styles.firstSon} style={{ fontSize: `${calculateDynamicFontSize(40)}px` }}>Não, divido casa com amigos (república, pensão, etc)</h1>
-            <div className={styles.Container}>
+            <h1 className={styles.firstSon} style={{ fontSize: `${calculateDynamicFontSize(32)}px` }}>Não, divido casa com amigos (república, pensão, etc)</h1>
+            <div className={styles.Container} >
                 <div className={styles.balao1}>
-                    <p>Nesses momentos é de extrema importância que você se aproxime os seus amigos e até mesmo compartilhe os seu sentimentos com eles.</p>
+                    <p style={{ fontSize: `${calculateDynamicFontSize(16)}px` }}>Nesses momentos é de extrema importância que você se aproxime os seus amigos e até mesmo compartilhe os seu sentimentos com eles.</p>
                     <img src="src\assets\amigos.png" alt="Não foi possível encontrar imagem" />
                 </div>
                 <div className={styles.balao2}>
-                    <p>Recomendo também que você procure a ajuda de um profissional para melhor lhe orientar. No QR Code abaixo, há uma tabela com alguns psicólogos disponíveis em São Carlos.</p>
+                    <p style={{ fontSize: `${calculateDynamicFontSize(16)}px` }}>Recomendo também que você procure a ajuda de um profissional para melhor lhe orientar. No QR Code abaixo, há uma tabela com alguns psicólogos disponíveis em São Carlos.</p>
                     <img src="src\assets\tabelapsico.png" alt="Não foi possível encontrar imagem" />
                 </div>
             </div>
@@ -35,7 +35,7 @@ export default function MorarRep()
             <Link to="/sentindo_so" style={{ textDecoration: 'none' }}>
                   <input type="button" value="VOLTAR" className={styles.back} style={{ fontSize: `${calculateDynamicFontSize(16)}px` }} />
             </Link>
-            <Link to="/" style={{ textDecoration: 'none' }}>
+            <Link to="/reconhecimento/feedback/rotina" style={{ textDecoration: 'none' }}>
                   <input type="button" value="CONCLUIR" className={styles.finalize} style={{ fontSize: `${calculateDynamicFontSize(16)}px` }} />
             </Link>
           </div>

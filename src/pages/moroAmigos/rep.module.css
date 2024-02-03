@@ -100,8 +100,10 @@ body {
 
 .back{
     margin-left: 126px;
+    cursor: pointer;
 }
 
 .finalize{
     margin-right: 126px;
+    cursor: pointer;
 }

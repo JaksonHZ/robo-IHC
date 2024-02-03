@@ -19,6 +19,7 @@ import Ansiedade from "../pages/Ansiedade";
 import SemInfo from "../pages/nseiinformar";
 import FeedbackRotina from "../pages/FeedbackRotina";
 import Agradecimento from "../pages/Agradecimentos";
+import Satisfacao from "../pages/satisfacao";
 
 const AppRouter = () => {
   return(
@@ -44,6 +45,7 @@ const AppRouter = () => {
         <Route path="/ansiedade" element={<Ansiedade />}/>
         <Route path="/semInfo" element={<SemInfo />}/>
         <Route path="/agradecimentos" element={<Agradecimento />}/>
+        <Route path="/satisfacao" element={<Satisfacao />}/>
       </Routes> 
     </>
   )
