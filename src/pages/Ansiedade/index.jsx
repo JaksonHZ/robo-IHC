@@ -26,18 +26,18 @@ export default function Ansiedade()
             <div className={styles.Container}>
                 <div className={styles.balao}>
                     <img src="src\assets\exercitar.png" alt="Não foi possível encontrar imagem" />
-                    <p className={styles.subtitle} style={{ fontSize: `${calculateDynamicFontSize(16)}px` }}>SE EXERCITE! </p>
-                    <p style={{ fontSize: `${calculateDynamicFontSize(16)}px`, marginLeft:'10px', marginRight:'10px' }}>Reserve um momento do seu dia para desestressar! Chama até seu gatinho se tiver.</p>
+                    <p className={styles.subtitle} style={{ fontSize: `${calculateDynamicFontSize(16)}px`, color:'black' }}>SE EXERCITE! </p>
+                    <p style={{ fontSize: `${calculateDynamicFontSize(16)}px`, marginLeft:'10px', marginRight:'10px', color:'black' }}>Reserve um momento do seu dia para desestressar! Chama até seu gatinho se tiver.</p>
                 </div>
                 <div className={styles.balao}>
                     <img src="src\assets\natureza.png" alt="Não foi possível encontrar imagem" />
-                    <p className={styles.subtitle} style={{ fontSize: `${calculateDynamicFontSize(16)}px` }}>FAÇA ATIVIDADES EM CONTATO COM A NATUREZA!</p>
-                    <p style={{ fontSize: `${calculateDynamicFontSize(16)}px` }}>Bora encontrar uma cachoeira!</p>
+                    <p className={styles.subtitle} style={{ fontSize: `${calculateDynamicFontSize(16)}px`, color:'black' }}>FAÇA ATIVIDADES EM CONTATO COM A NATUREZA!</p>
+                    <p style={{ fontSize: `${calculateDynamicFontSize(16)}px`, color:'black' }}>Bora encontrar uma cachoeira!</p>
                 </div>
                 <div className={styles.balao}>
                     <img src="src\assets\profissional.png" alt="Não foi possível encontrar imagem" />
-                    <p className={styles.subtitle} style={{ fontSize: `${calculateDynamicFontSize(16)}px` }}>PROCURE UM PROFISSIONAL</p>
-                    <p style={{ fontSize: `${calculateDynamicFontSize(16)}px`, marginLeft:'10px' }} >Quem vai saber mesmo como te instruir é um profissional!</p>
+                    <p className={styles.subtitle} style={{ fontSize: `${calculateDynamicFontSize(16)}px`, color:'black' }}>PROCURE UM PROFISSIONAL</p>
+                    <p style={{ fontSize: `${calculateDynamicFontSize(16)}px`, marginLeft:'10px', color:'black' }} >Quem vai saber mesmo como te instruir é um profissional!</p>
                 </div>
             </div>
             
