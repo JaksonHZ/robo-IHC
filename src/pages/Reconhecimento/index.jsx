@@ -6,6 +6,7 @@ import { useExternalScript } from "../../utils/ai-sdk/externalScriptsLoader";
 import { getAiSdkControls } from "../../utils/ai-sdk/loader";
 import FaceTrackerComponent from "../../components/FaceTrackerComponent";
 import { useNavigate } from "react-router-dom";
+import { ProgressBar } from "primereact/progressbar";
 
 export default function Reconhecimento(){
   const { fontSize } = useContext(FontSizeContext);
@@ -68,6 +69,13 @@ export default function Reconhecimento(){
         <video id="videoEl" ref={videoEl} autoPlay playsInline></video>
         <FaceTrackerComponent videoEl={videoEl}></FaceTrackerComponent>
       </div>
+      <ProgressBar
+          value={Math.round((emotionCount / 30) * 100)}
+          pt={{
+              value: { style: { background: 'linear-gradient(to right, #8e2de2, #4a00e0)'} }
+          }}
+          className={styles.progress}
+      ></ProgressBar>
     </div>
   )
 }

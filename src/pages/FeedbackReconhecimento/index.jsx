@@ -4,11 +4,23 @@ import CustomFontSize from "../../components/CustomFontSize/CustomFontSize";
 import { FontSizeContext } from "../../context/ContextFontSize";
 import robo from "../../assets/bot.png";
 import CustomButton from "../../components/CustomButton/CustomButton";
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+
 export default function FeedbackReconhecimento(){
     const { fontSize } = useContext(FontSizeContext);
     const location = useLocation();
     const { emotion } = location.state || {};
+    const navigate = useNavigate();
+
+    function handleYes(){
+        console.log("yes");
+        localStorage.setItem('emotion', emotion);
+        navigate('/reconhecimento/positivanivel');
+    }
+
+    function handleNo(){
+        console.log("no");
+    }
     
     return(
         <div className={styles.body}>
@@ -18,8 +30,8 @@ export default function FeedbackReconhecimento(){
             <p style={{ fontSize: `${fontSize}px` }}>Voce realmente está se sentindo assim?</p>
             <img src={robo} alt="Não foi possível encontrar a imagem :(" />
             <div className={styles.containerButton}>
-              <CustomButton text={"SIM"} />
-              <CustomButton text={"NÃO"} />
+              <CustomButton text={"SIM"} onClick={handleYes}/>
+              <CustomButton text={"NÃO"} onClick={handleNo}/>
             </div>
         </div>
 

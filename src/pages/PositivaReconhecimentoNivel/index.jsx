@@ -1,10 +1,11 @@
 import { useContext, useState } from "react";
 import styles from "./styles.module.css";
-import CustomFontSize from "../../components/CustomFontSize/CustomFontSize";
 import { FontSizeContext } from "../../context/ContextFontSize";
 import robo from "../../assets/bot.png";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import ConfigButton from "../../components/ConfigButton/ConfigButton";
+import Background from "../../components/Background/Background";
+
 export default function PositivaReconhecimentoNivel(){
     const { fontSize } = useContext(FontSizeContext);
     const [selectedButton, setSelectedButton] = useState(null);
@@ -15,8 +16,8 @@ export default function PositivaReconhecimentoNivel(){
 
     return(
         <div className={styles.body}>
+            <Background />
             <ConfigButton />
-            <CustomFontSize />
             <p style={{ fontSize: `${fontSize}px`, color: 'white' }}>Qual o nível dessa emoção</p>
             <img src={robo} alt="Não foi possível encontrar a imagem :(" />
             <div className={styles.containerButton}>

@@ -1,5 +1,6 @@
 /* styles.module.css */
 .configButton {
+    z-index: 3;
     position: absolute;
     top: 10px;
     left: 10px;
