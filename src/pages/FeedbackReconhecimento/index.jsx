@@ -31,12 +31,17 @@ export default function FeedbackReconhecimento(){
         "Disgust": "Nervoso",
     }
     
+    const calculateDynamicFontSize = (baseFontSize) => {
+        // Aqui você pode ajustar o fator multiplicativo ou aditivo conforme necessário
+        return baseFontSize * (fontSize / 40);
+      };
+
     return(
         <div className={styles.body}>
             <CustomFontSize />
-            <p className={styles.firstSon} style={{ fontSize: `${fontSize}px` }}>Aparentemente você está se sentindo</p>
-            <p style={{ fontSize: `${fontSize}px` }}>{translate[emotion]}</p>
-            <p style={{ fontSize: `${fontSize}px` }}>Voce realmente está se sentindo assim?</p>
+            <p className={styles.firstSon} style={{ fontSize: `${calculateDynamicFontSize(40)}px`, marginBottom: '0px' }}>Aparentemente você está se sentindo</p>
+            <p style={{ fontSize: `${calculateDynamicFontSize(40)}px`, marginBottom: '10px' }}>{translate[emotion]}</p>
+            <p style={{ fontSize: `${calculateDynamicFontSize(40)}px` }}>Voce realmente está se sentindo assim?</p>
             <img src={robo} alt="Não foi possível encontrar a imagem :(" />
             <div className={styles.containerButton}>
               <CustomButton text={"SIM"} onClick={handleYes}/>
