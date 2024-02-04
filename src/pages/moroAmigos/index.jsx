@@ -4,8 +4,8 @@ import CustomFontSize from "../../components/CustomFontSize/CustomFontSize";
 import { FontSizeContext } from "../../context/ContextFontSize";
 import { Link } from "react-router-dom";
 import ConfigButton from "../../components/ConfigButton/ConfigButton";
-import amigos from "/src/assets/amigos.png";
-import tabelapsico from "/src/assets/tabelapsico.png";
+import amigos from "../../assets/amigos.png";
+import tabelapsico from "../../assets/tabelapsico.png";
 
 
 export default function MorarRep()

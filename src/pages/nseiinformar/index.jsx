@@ -4,7 +4,7 @@ import CustomFontSize from "../../components/CustomFontSize/CustomFontSize";
 import { FontSizeContext } from "../../context/ContextFontSize";
 import { Link } from "react-router-dom";
 import ConfigButton from "../../components/ConfigButton/ConfigButton";
-import idn from "/src/assets/idn.png";
+import idn from "../../assets/idn.png";
 
 
 export default function SemInfo()
