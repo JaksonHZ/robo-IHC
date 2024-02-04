@@ -1,13 +1,19 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styles from './styles.module.css';
 import { FaArrowLeft } from "react-icons/fa";
 
 const ArrowLeft = () => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(-1); // Navega para trás na pilha de histórico
+    };
+
     return (
         <div className={styles.arrowleft}>
-            <Link to="/">
+            <button onClick={handleClick}>
                 <FaArrowLeft size={32}/>
-            </Link>
+            </button>
         </div>
     );
 };
