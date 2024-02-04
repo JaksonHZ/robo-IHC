@@ -17,7 +17,7 @@ export default function Background() {
       '#25467D',
       '#356CB1'
     ],
-    'Anger': [
+    'Angry': [
       '#CC2424',
       '#AB2323',
       '#C42A2A',

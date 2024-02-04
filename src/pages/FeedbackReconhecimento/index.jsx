@@ -19,14 +19,23 @@ export default function FeedbackReconhecimento(){
     }
 
     function handleNo(){
-        console.log("no");
+        navigate('/sentimentos');
+    }
+
+    const translate = {
+        "Happy": "Feliz",
+        "Sad": "Triste",
+        "Angry": "Bravo",
+        "Surprise": "Supreso",
+        "Neutral": "Neutro",
+        "Disgust": "Nervoso",
     }
     
     return(
         <div className={styles.body}>
             <CustomFontSize />
             <p className={styles.firstSon} style={{ fontSize: `${fontSize}px` }}>Aparentemente você está se sentindo</p>
-            <p style={{ fontSize: `${fontSize}px` }}>{emotion}</p>
+            <p style={{ fontSize: `${fontSize}px` }}>{translate[emotion]}</p>
             <p style={{ fontSize: `${fontSize}px` }}>Voce realmente está se sentindo assim?</p>
             <img src={robo} alt="Não foi possível encontrar a imagem :(" />
             <div className={styles.containerButton}>

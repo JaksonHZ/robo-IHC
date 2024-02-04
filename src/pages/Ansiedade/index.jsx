@@ -1,10 +1,12 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import styles from "./anxious.module.css";
 import CustomFontSize from "../../components/CustomFontSize/CustomFontSize";
 import { FontSizeContext } from "../../context/ContextFontSize";
 import { Link } from "react-router-dom";
 import ConfigButton from "../../components/ConfigButton/ConfigButton";
-
+import exercitar from "../../assets/exercitar.png";
+import natureza from "../../assets/natureza.png";
+import profissional from "../../assets/profissional.png";
 
 export default function Ansiedade()
 {
@@ -25,17 +27,17 @@ export default function Ansiedade()
             </Link>
             <div className={styles.Container}>
                 <div className={styles.balao}>
-                    <img src="src\assets\exercitar.png" alt="Não foi possível encontrar imagem" />
+                    <img src={exercitar} alt="Não foi possível encontrar imagem" />
                     <p className={styles.subtitle} style={{ fontSize: `${calculateDynamicFontSize(16)}px`, color:'black' }}>SE EXERCITE! </p>
                     <p style={{ fontSize: `${calculateDynamicFontSize(16)}px`, marginLeft:'10px', marginRight:'10px', color:'black' }}>Reserve um momento do seu dia para desestressar! Chama até seu gatinho se tiver.</p>
                 </div>
                 <div className={styles.balao}>
-                    <img src="src\assets\natureza.png" alt="Não foi possível encontrar imagem" />
+                    <img src={natureza} alt="Não foi possível encontrar imagem" />
                     <p className={styles.subtitle} style={{ fontSize: `${calculateDynamicFontSize(16)}px`, color:'black' }}>FAÇA ATIVIDADES EM CONTATO COM A NATUREZA!</p>
                     <p style={{ fontSize: `${calculateDynamicFontSize(16)}px`, color:'black' }}>Bora encontrar uma cachoeira!</p>
                 </div>
                 <div className={styles.balao}>
-                    <img src="src\assets\profissional.png" alt="Não foi possível encontrar imagem" />
+                    <img src={profissional} alt="Não foi possível encontrar imagem" />
                     <p className={styles.subtitle} style={{ fontSize: `${calculateDynamicFontSize(16)}px`, color:'black' }}>PROCURE UM PROFISSIONAL</p>
                     <p style={{ fontSize: `${calculateDynamicFontSize(16)}px`, marginLeft:'10px', color:'black' }} >Quem vai saber mesmo como te instruir é um profissional!</p>
                 </div>
