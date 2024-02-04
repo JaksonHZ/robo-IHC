@@ -7,6 +7,7 @@ import { getAiSdkControls } from "../../utils/ai-sdk/loader";
 import FaceTrackerComponent from "../../components/FaceTrackerComponent";
 import { useNavigate } from "react-router-dom";
 import { ProgressBar } from "primereact/progressbar";
+import ConfigButton from "../../components/ConfigButton/ConfigButton"
 
 export default function Reconhecimento(){
   const { fontSize } = useContext(FontSizeContext);
@@ -61,6 +62,7 @@ export default function Reconhecimento(){
 
   return(
     <div className={styles.body}>
+      <ConfigButton />
       <CustomFontSize />
       <h1 style={{ fontSize: `${fontSize}px` }}>Enquadre seu rosto abaixo
           para que eu possa detectar 

@@ -5,6 +5,7 @@ import { FontSizeContext } from "../../context/ContextFontSize";
 import robo from "../../assets/bot.png";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import { useLocation, useNavigate } from 'react-router-dom';
+import ConfigButton from "../../components/ConfigButton/ConfigButton";
 
 export default function FeedbackReconhecimento(){
     const { fontSize } = useContext(FontSizeContext);
@@ -38,10 +39,11 @@ export default function FeedbackReconhecimento(){
 
     return(
         <div className={styles.body}>
+            <ConfigButton />
             <CustomFontSize />
-            <p className={styles.firstSon} style={{ fontSize: `${calculateDynamicFontSize(40)}px`, marginBottom: '0px' }}>Aparentemente você está se sentindo</p>
-            <p style={{ fontSize: `${calculateDynamicFontSize(40)}px`, marginBottom: '10px' }}>{translate[emotion]}</p>
-            <p style={{ fontSize: `${calculateDynamicFontSize(40)}px` }}>Voce realmente está se sentindo assim?</p>
+            <p className={styles.firstSon} style={{ fontSize: `${calculateDynamicFontSize(40)}px`, marginBottom: '5px' }}>Aparentemente você está se sentindo</p>
+            <p style={{ fontSize: `${calculateDynamicFontSize(40)}px`, marginBottom: '5px', marginTop: '0px' }}>{translate[emotion]}</p>
+            <p style={{ fontSize: `${calculateDynamicFontSize(40)}px`, marginBottom: '5px', marginTop: '0px' }}>Voce realmente está se sentindo assim?</p>
             <img src={robo} alt="Não foi possível encontrar a imagem :(" />
             <div className={styles.containerButton}>
               <CustomButton text={"SIM"} onClick={handleYes}/>
