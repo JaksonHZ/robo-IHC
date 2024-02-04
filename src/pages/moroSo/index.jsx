@@ -4,7 +4,8 @@ import CustomFontSize from "../../components/CustomFontSize/CustomFontSize";
 import { FontSizeContext } from "../../context/ContextFontSize";
 import { Link } from "react-router-dom";
 import ConfigButton from "../../components/ConfigButton/ConfigButton";
-
+import soamigos from "/src/assets/soamigos.png";
+import tabelapsico from "/src/assets/tabelapsico.png";
 
 export default function MorarSo()
 {
@@ -23,11 +24,11 @@ export default function MorarSo()
             <div className={styles.Container}>
                 <div className={styles.balao1}>
                     <p style={{ fontSize: `${calculateDynamicFontSize(16)}px` }}>Tente entrar em contato com algum familiar ou amigo próximo e compartilhe o que você está sentindo nesse momento, além de realizarem alguma atividade de lazer juntos.</p>
-                    <img src="src\assets\soamigos.png" alt="Não foi possível encontrar imagem" />
+                    <img src={soamigos} alt="Não foi possível encontrar imagem" />
                 </div>
                 <div className={styles.balao2}>
                     <p style={{ fontSize: `${calculateDynamicFontSize(16)}px` }}>Recomendo também que você procure a ajuda de um profissional para melhor lhe orientar. No QR Code abaixo, há uma tabela com alguns psicólogos disponíveis em São Carlos.</p>
-                    <img src="src\assets\tabelapsico.png" alt="Não foi possível encontrar imagem" />
+                    <img src={tabelapsico} alt="Não foi possível encontrar imagem" />
                 </div>
             </div>
             

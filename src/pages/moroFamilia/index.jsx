@@ -23,11 +23,11 @@ export default function MorarFamilia()
             <div className={styles.Container}>
                 <div className={styles.balao1}>
                     <p style={{ fontSize: `${calculateDynamicFontSize(16)}px` }}>Tente manter uma boa relação com seus pais, converse com eles e além de tudo, tente se expressar caso queira ir atrás de passar mais tempo com as novas amizades.</p>
-                    <img src="src\assets\familya.png" alt="Não foi possível encontrar imagem" />
+                    <img src="/src/assets/familya.png" alt="Não foi possível encontrar imagem" />
                 </div>
                 <div className={styles.balao2}>
                     <p style={{ fontSize: `${calculateDynamicFontSize(16)}px` }}>Recomendo também que você procure a ajuda de um profissional para melhor lhe orientar. No QR Code abaixo, há uma tabela com alguns psicólogos disponíveis em São Carlos.</p>
-                    <img src="src\assets\tabelapsico.png" alt="Não foi possível encontrar imagem" />
+                    <img src="/src/assets/tabelapsico.png" alt="Não foi possível encontrar imagem" />
                 </div>
             </div>
             

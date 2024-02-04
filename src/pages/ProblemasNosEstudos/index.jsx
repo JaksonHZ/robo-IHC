@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import CustomFontSize from "../../components/CustomFontSize/CustomFontSize";
 import { FontSizeContext } from "../../context/ContextFontSize";
 import ConfigButton from "../../components/ConfigButton/ConfigButton";
+import qrcode from "../../assets/qrcode_proestudo.png";
+import proestudo from "../../assets/proestudo.png";
 import { FaTextHeight } from "react-icons/fa6";
 
 export default function ProblemasNosEstudos(){
@@ -29,9 +31,9 @@ export default function ProblemasNosEstudos(){
                 <p>Instagram, escanear o QRCode ou responder o forms do ProEstudo</p>
                 <p>na bio do Instagram.</p>
                 <div className={styles.final}>
-                    <img src="src/assets/qrcode_proestudo.png" alt="QR Code ProEstudo" className={styles.qrcodeImage} />               
+                    <img src={qrcode} alt="QR Code ProEstudo" className={styles.qrcodeImage} />               
                     <p style={{marginLeft: '0px'}}><br></br> <br></br> <br></br> @proestudo_ufscar <br></br> <br></br>proestudo@ufscar.br</p>
-                    <img src="src/assets/proestudo.png" alt="ProEstudo" className={styles.proestudoImage} />
+                    <img src={proestudo} alt="ProEstudo" className={styles.proestudoImage} />
                 </div>
             </div>
             <div className={styles.allback}>

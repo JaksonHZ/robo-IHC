@@ -20,8 +20,8 @@ export default function Home() {
       <CustomFontSize />
       <h1 className={styles.firstSon} style={{ fontSize: `${calculateDynamicFontSize(40)}px` }}>Olá!</h1>
       <h1 style={{ fontSize: `${calculateDynamicFontSize(40)}px` }}>Eu sou o robô anfitrião do DC!</h1>
-      <h1 style={{ fontSize: `${calculateDynamicFontSize(40)}px` }}>Gostaria de iniciar um atendimento?</h1>
-      <img src={robo} alt="Não foi possível encontrar a imagem :(" />
+      <h1 style={{ fontSize: `${calculateDynamicFontSize(40)}px`}}>Gostaria de iniciar um atendimento?</h1>
+      <img src={robo} alt="Não foi possível encontrar a imagem :(" style={{marginTop:'0px'}} />
       <Link to="/reconhecimento" style={{ textDecoration: 'none' }}>
         <input type="button" value="INICIAR" className={styles.button} style={{ fontSize: `${calculateDynamicFontSize(16)}px` }} />
       </Link>

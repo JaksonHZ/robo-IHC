@@ -20,7 +20,7 @@ export default function SemInfo()
           <ConfigButton />
           <CustomFontSize />
             <h1 className={styles.firstSon} style={{ fontSize: `${calculateDynamicFontSize(40)}px` }}>Não sei informar...</h1>
-            <img className={styles.idn} src="src\assets\idn.png" alt="Não sabemos informar onde está a imagem" />
+            <img className={styles.idn} src="/src/assets/idn.png" alt="Não sabemos informar onde está a imagem" />
             
             <div className={styles.allback}>
             <Link to="/respostas_prontas" style={{ textDecoration: 'none' }}>

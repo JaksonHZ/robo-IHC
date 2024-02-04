@@ -24,7 +24,7 @@ export default function satisfacao(){
         <div className={styles.body}>
             <ConfigButton />
             <CustomFontSize />
-            <p style={{ fontSize: `${fontSize}px`, color: 'white', textAlign:'center', marginTop:'0px' }}>Qual o nível da emoção negativa <br></br>
+            <p style={{ fontSize: `${fontSize}px`, color: 'white', textAlign:'center', marginTop:'0px' }}>Qual o nível da emoção<br></br>
             que está sentindo após a pratica sugerida?</p>
             <img src={robo} alt="Não foi possível encontrar a imagem :(" />
             <div className={styles.containerButton} >
