@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import styles from "./styles.module.css";
 import CustomFontSize from "../../components/CustomFontSize/CustomFontSize";
 import { FontSizeContext } from "../../context/ContextFontSize";
+import ArrowLeft from "../../components/ArrowLeft/ArrowLeft";
 import { Link } from "react-router-dom";
 import ConfigButtonBlue from "../../components/ConfigButtonBlue/ConfigButton";
 import robo from "../../assets/bot.png";
@@ -15,6 +16,7 @@ export default function SobreNos() {
 
   return (
     <div className={styles.leftContent}>
+      <ArrowLeft />
       <ConfigButtonBlue />
       <CustomFontSize />
       <h1 className={styles.firstSon} style={{ fontSize: `${calculateDynamicFontSize(40)}px` }}>Sobre nós</h1>
