@@ -1,10 +1,18 @@
 import { useState } from "react";
 import styles from "./styles.module.css";
 import CustomButton from "../../components/CustomButton/CustomButton";
+import { useNavigate } from "react-router-dom";
 
 export default function Meditacao() {
   const [started, setStarted] = useState(false);
-  
+  const navigate = useNavigate();
+
+
+  const handleNavigation = () => {
+    navigate("/respostas_prontas");
+  }
+
+
   return (
     <div className={styles.body}>
 
@@ -23,10 +31,10 @@ export default function Meditacao() {
 
       </div>
 
-      <CustomButton className={styles.buttonCancel} text={"Cancelar"} onClick={() => console.log("teste")} />
+      <CustomButton className={styles.buttonCancel} text={"Cancelar"} onClick={handleNavigation} />
 
       {started &&
-      <CustomButton className={styles.buttonNext} text={"Concluir"} onClick={() => console.log("teste")} />}
+      <CustomButton className={styles.buttonNext} text={"Concluir"} onClick={handleNavigation} />}
     </div>
   );
 }

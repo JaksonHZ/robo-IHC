@@ -20,6 +20,7 @@ import SemInfo from "../pages/nseiinformar";
 import FeedbackRotina from "../pages/FeedbackRotina";
 import Satisfacao from "../pages/satisfacao";
 import Agradecimento from "../pages/Agradecimentos";
+import PositivaReconhecimento from "../pages/PositivaReconhecimento";
 
 const AppRouter = () => {
   return(
@@ -32,6 +33,7 @@ const AppRouter = () => {
         <Route path="/reconhecimento" element={<Reconhecimento />}/>
         <Route path="/reconhecimento/feedback" element={<FeedbackReconhecimento />}/>
         <Route path="/sentimentos" element={<Sentimentos />}/>
+        <Route path="/reconhecimento/positiva" element={<PositivaReconhecimento />}/>
         <Route path="/reconhecimento/positivanivel" element={<PositivaReconhecimentoNivel />}/>
         <Route path="/respiracao" element={<Respiracao />}/>
         <Route path="/meditacao" element={<Meditacao />}/>

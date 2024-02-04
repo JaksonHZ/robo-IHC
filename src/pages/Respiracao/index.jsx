@@ -1,11 +1,14 @@
 import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import CustomButton from "../../components/CustomButton/CustomButton";
+import { useNavigate } from "react-router-dom";
 
 export default function Respiracao() {
   const [started, setStarted] = useState(false);
   const [size, setSize] = useState(150); 
   const [isInhaling, setIsInhaling] = useState(true);
+  const navigate = useNavigate();
+
   useEffect(() => {
     let interval;
     if (started) {
@@ -40,6 +43,10 @@ export default function Respiracao() {
     setIsInhaling(true);
   }
 
+  const handleNavigation = () => {
+    navigate("/meditacao");
+  }
+
   return (
     <div className={styles.body}>
 
@@ -70,7 +77,7 @@ export default function Respiracao() {
         <CustomButton text={"Parar"} onClick={handleStop} />
       )}
 
-      <CustomButton className={styles.buttonNext} text={"Seguir"} onClick={() => console.log("teste")} />
+      <CustomButton className={styles.buttonNext} text={"Seguir"} onClick={handleNavigation} />
     </div>
   );
 }

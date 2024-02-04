@@ -5,14 +5,18 @@ import robo from "../../assets/bot.png";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import ConfigButton from "../../components/ConfigButton/ConfigButton";
 import Background from "../../components/Background/Background";
-
+import { useNavigate } from "react-router-dom";
 export default function PositivaReconhecimentoNivel(){
     const { fontSize } = useContext(FontSizeContext);
     const [selectedButton, setSelectedButton] = useState(null);
-
+    const navigate = useNavigate();
     const handleButtonClick = (buttonValue) => {
         setSelectedButton(buttonValue);
     };
+
+    const handleNavigation = () => {
+        navigate("/reconhecimento/positiva");
+    }
 
     return(
         <div className={styles.body}>
@@ -33,7 +37,7 @@ export default function PositivaReconhecimentoNivel(){
 
             </div>
 
-            {selectedButton && <CustomButton className={styles.nextButton} text={"Prosseguir"} />}
+            {selectedButton && <CustomButton className={styles.nextButton} text={"Prosseguir"} onClick={handleNavigation} />}
         </div>
     );
 }
