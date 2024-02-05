@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import styles from "./styles.module.css";
 import { FontSizeContext } from "../../context/ContextFontSize";
 import robo from "../../assets/bot.png";
@@ -6,6 +6,8 @@ import CustomButton from "../../components/CustomButton/CustomButton";
 import ConfigButton from "../../components/ConfigButton/ConfigButton";
 import Background from "../../components/Background/Background";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
 export default function PositivaReconhecimentoNivel(){
     const { fontSize } = useContext(FontSizeContext);
     const [selectedButton, setSelectedButton] = useState(null);
@@ -17,6 +19,17 @@ export default function PositivaReconhecimentoNivel(){
     const handleNavigation = () => {
         navigate("/reconhecimento/positiva");
     }
+
+    useEffect(() => {
+        //const emotion = localStorage.getItem('emotion');
+
+        axios.get(`http://192.168.1.100:5000/led/changeExpression/9`)
+        .then(response => {
+            console.log("teste" + response.data);
+        }).catch(error => {
+            console.log(error);
+        });
+    },[])
 
     return(
         <div className={styles.body}>
