@@ -27,7 +27,7 @@ export default function PositivaReconhecimento(){
         <div className={styles.body}>
             <Background />
             <ConfigButton />
-            <p style={{ fontSize: `${fontSize}px`, color: 'white' }}>Gostaria de iniciar uma respiracao e meditação guiada por voz?</p>
+            <p style={{ fontSize: `${fontSize}px`, color: 'white' }}>Gostaria de iniciar uma respiração e meditação guiada por voz?</p>
             <img src={robo} alt="Não foi possível encontrar a imagem :(" />   
             <div className={styles.containerButton}>
                 <CustomButton text={"Não"} onClick={handleNavigationNo} />
