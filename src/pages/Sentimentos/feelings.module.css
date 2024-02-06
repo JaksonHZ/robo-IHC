@@ -15,6 +15,7 @@ body {
     align-items: center;
     justify-content: start;
     flex-direction: column;
+    position: relative;
 }
 
 .body h1{

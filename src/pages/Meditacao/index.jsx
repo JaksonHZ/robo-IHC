@@ -31,7 +31,8 @@ export default function Meditacao() {
 
       </div>
 
-      <CustomButton className={styles.buttonCancel} text={"Cancelar"} onClick={handleNavigation} />
+     { !started &&
+      <CustomButton className={styles.buttonCancel} text={"Cancelar"} onClick={handleNavigation} />}
 
       {started &&
       <CustomButton className={styles.buttonNext} text={"Concluir"} onClick={handleNavigation} />}
