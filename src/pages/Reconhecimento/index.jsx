@@ -44,19 +44,21 @@ export default function Reconhecimento(){
       console.log(dominantEmotion);
       
 
-      if (dominantEmotion === lastEmotion) {
-        setEmotionCount(emotionCount + 1);
-
-        if (emotionCount + 1 === 15) {
-          console.log(`Enviando emoção dominante: ${dominantEmotion}`);
-          await stop();
-          setEmotionCount(0);
-          setLastEmotion('');
-          navigate("/reconhecimento/feedback", {state: {emotion: dominantEmotion}});
+      if (dominantEmotion !== ''){
+        if (dominantEmotion === lastEmotion) {
+          setEmotionCount(emotionCount + 1);
+  
+          if (emotionCount + 1 === 15) {
+            console.log(`Enviando emoção dominante: ${dominantEmotion}`);
+            await stop();
+            setEmotionCount(0);
+            setLastEmotion('');
+            navigate("/reconhecimento/feedback", {state: {emotion: dominantEmotion}});
+          }
+        } else {
+          setLastEmotion(dominantEmotion);
+          setEmotionCount(1);
         }
-      } else {
-        setLastEmotion(dominantEmotion);
-        setEmotionCount(1);
       }
     }
 
