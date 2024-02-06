@@ -20,7 +20,7 @@ export default function FeedbackReconhecimento(){
     }
 
     function handleNo(){
-        navigate('/sentimentos');
+        navigate('/sentimentos', {state: {emotion: emotion}});
     }
 
     const translate = {

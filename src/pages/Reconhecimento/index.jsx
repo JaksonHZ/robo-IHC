@@ -34,18 +34,25 @@ export default function Reconhecimento(){
   }, [aiSdkState, mphToolsState]);
 
   useEffect(() => {
-    function handleEmotion(evt) {
+    setEmotionCount(0);
+  },[])
+
+  useEffect(() => {
+    async function handleEmotion(evt) {
       const dominantEmotion = evt.detail.output.dominantEmotion || "";
+      const { stop } = await getAiSdkControls();
       console.log(dominantEmotion);
+      
 
       if (dominantEmotion === lastEmotion) {
         setEmotionCount(emotionCount + 1);
 
-        if (emotionCount + 1 === 30) {
+        if (emotionCount + 1 === 20) {
           console.log(`Enviando emoção dominante: ${dominantEmotion}`);
-          navigate("/reconhecimento/feedback", {state: {emotion: dominantEmotion}});
+          await stop();
           setEmotionCount(0);
           setLastEmotion('');
+          navigate("/reconhecimento/feedback", {state: {emotion: dominantEmotion}});
         }
       } else {
         setLastEmotion(dominantEmotion);

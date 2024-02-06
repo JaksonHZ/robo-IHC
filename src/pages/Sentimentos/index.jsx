@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import styles from "./feelings.module.css";
 import CustomFontSize from "../../components/CustomFontSize/CustomFontSize";
 import { FontSizeContext } from "../../context/ContextFontSize";
-import { Link } from "react-router-dom";
 import ConfigButton from "../../components/ConfigButton/ConfigButton";
 import { useNavigate } from "react-router-dom";
 import tristeza from "../../assets/tristeza.png";
@@ -10,8 +9,13 @@ import raiva from "../../assets/raiva.png";
 import alegria from "../../assets/alegria.png";
 import neutro from "../../assets/neutro.png";
 import nervosismo from "../../assets/nervosismo.png";
+import CustomButton from "../../components/CustomButton/CustomButton";
+import { useLocation } from 'react-router-dom';
+
 export default function Sentimentos()
 {
+    const location = useLocation();
+    const { emotion } = location.state || {};
     const { fontSize } = useContext(FontSizeContext);
     const navigate = useNavigate();
     const calculateDynamicFontSize = (baseFontSize) => {
@@ -24,6 +28,9 @@ export default function Sentimentos()
       navigate('/reconhecimento/positivanivel');
     }
 
+    const handleNavigationBack = () => {
+      navigate('/reconhecimento/feedback', {state: {emotion: emotion}});
+    }
 
     return (
         <div className={styles.body}>
@@ -52,11 +59,12 @@ export default function Sentimentos()
                 <input type="button" value="Nervosismo" className={styles.button} style={{ fontSize: `${calculateDynamicFontSize(16)}px` }} />
             </div>
           </div>
-          <div className={styles.allback}>
+          {/* <div className={styles.allback}>
             <Link to="/" style={{ textDecoration: 'none' }}>
                   <input type="button" value="VOLTAR" className={styles.back} style={{ fontSize: `${calculateDynamicFontSize(16)}px` }} />
             </Link>
-          </div>
+          </div> */}
+            <CustomButton onClick={() => handleNavigationBack()} text={"VOLTAR"} className={styles.buttonBack}/>
         </div>
       );
 }
