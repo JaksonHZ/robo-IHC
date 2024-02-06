@@ -48,7 +48,7 @@ export default function Reconhecimento(){
         if (dominantEmotion === lastEmotion) {
           setEmotionCount(emotionCount + 1);
   
-          if (emotionCount + 1 === 15) {
+          if (emotionCount + 1 === 30) {
             console.log(`Enviando emoção dominante: ${dominantEmotion}`);
             await stop();
             setEmotionCount(0);
